@@ -45,5 +45,6 @@ class MainActivity2 : AppCompatActivity() {
         //}
 
         //let: se a listaRecebida se não for nulo, faça
+        //it: é a listaRecebida
     }
 }
