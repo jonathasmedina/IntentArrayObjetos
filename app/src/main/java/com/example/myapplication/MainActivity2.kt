@@ -20,11 +20,14 @@ class MainActivity2 : AppCompatActivity() {
 
         listview = findViewById(R.id.listView1)
 
-        //Exemplo 1
+        //Exemplo 1 - recebendo arraylist de String
             //recebendo arraylist de String
             //val lista = intent.getStringArrayListExtra("listaItens")
 
-        //Exemplo 2
+        //Exemplo 1.5 - recebendo um objeto parcelable
+            //val pessoa = intent.getParcelableExtra<Pessoa>("pessoa")
+
+        //Exemplo 2 - recebendo arraylist de objetos parcelable
             @Suppress("DEPRECATION")
             val listaRecebida = intent.getParcelableArrayListExtra<Pessoa>("listaPessoas")
 
@@ -35,5 +38,12 @@ class MainActivity2 : AppCompatActivity() {
             adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaRecebida)
             listview.adapter = adapter
         }
+        //outra forma de escrever trecho acima, com let:
+        //listaRecebida?.let {
+        //    adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, it)
+        //    listview.adapter = adapter
+        //}
+
+        //let: se a listaRecebida se não for nulo, faça
     }
 }

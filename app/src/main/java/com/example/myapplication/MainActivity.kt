@@ -22,11 +22,17 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, MainActivity2::class.java)
 
+        //Exemplo 1 - passando arraylist de string
         intent.putStringArrayListExtra("listaItens", itemList)
+        startActivity(intent)
 
-//        startActivity(intent)
+        //Exemplo 1.5 - passando um objeto
+        val pessoa = Pessoa("Ana", 22)
+        intent.putExtra("pessoa", pessoa)
+        startActivity(intent)
 
-        //passando intent com arraylist de Objetos
+
+        //Exemplo 2 - passando arraylist de objetos
         val pessoas = arrayListOf(
             Pessoa("Ana", 22),
             Pessoa("Carlos", 35)
