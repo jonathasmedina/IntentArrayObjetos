@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("pessoa", pessoa)
         startActivity(intent)
 
-
         //Exemplo 2 - passando arraylist de objetos
         val pessoas = arrayListOf(
             Pessoa("Ana", 22),
@@ -44,3 +43,19 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent2)
     }
 }
+
+/*
+diferença arrayListOf e ArrayList:
+    arrayListOf()
+	•	É uma função da biblioteca padrão do Kotlin.
+	•	Cria uma instância de ArrayList mutável.
+	•	Pode ser inicializada com elementos.
+	•	Tem inferência de tipo automática.
+	•	Mais idiomático em Kotlin.
+
+	ArrayList<T>()
+	•	É uma classe herdada do Java (java.util.ArrayList).
+	•	Pode ser instanciada diretamente.
+	•	Permite definir a capacidade inicial ou passar outra coleção.
+	•	Útil em código interoperável com Java.
+ */
