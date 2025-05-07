@@ -22,7 +22,7 @@ class MainActivity2 : AppCompatActivity() {
 
         //Exemplo 1 - recebendo arraylist de String
             //recebendo arraylist de String
-            //val lista = intent.getStringArrayListExtra("listaItens")
+           // val lista = intent.getStringArrayListExtra("listaItens")
 
         //Exemplo 1.5 - recebendo um objeto parcelable
             //val pessoa = intent.getParcelableExtra<Pessoa>("pessoa")
@@ -34,15 +34,15 @@ class MainActivity2 : AppCompatActivity() {
             //33 pra cima, este projeto = 30
             //val listaRecebida = intent.getParcelableArrayListExtra<Pessoa>("lista", Pessoa::class.java)
 
-        if (listaRecebida != null){
+      /*  if (listaRecebida != null){
             adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaRecebida)
             listview.adapter = adapter
-        }
+        }*/
         //outra forma de escrever trecho acima, com let:
-        //listaRecebida?.let {
-        //    adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, it)
-        //    listview.adapter = adapter
-        //}
+        listaRecebida?.let {
+            adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, it)
+            listview.adapter = adapter
+        }
 
         //let: se a listaRecebida se não for nulo, faça
         //it: é a listaRecebida

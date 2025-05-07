@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
 /*
 diferença arrayListOf e ArrayList:
+
     arrayListOf()
 	•	É uma função da biblioteca padrão do Kotlin.
 	•	Cria uma instância de ArrayList mutável.
@@ -58,4 +59,5 @@ diferença arrayListOf e ArrayList:
 	•	Pode ser instanciada diretamente.
 	•	Permite definir a capacidade inicial ou passar outra coleção.
 	•	Útil em código interoperável com Java.
+
  */
